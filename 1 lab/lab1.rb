@@ -114,3 +114,14 @@ def count_prime_digits(num)
 	end
 	count
 end
+
+def sum_digts_div_3(num)
+	sum = 0
+	while(num != 0)
+		if (num%10)% 3 == 0
+			sum += num%10
+		end
+		num /= 10
+	end
+	sum
+end
