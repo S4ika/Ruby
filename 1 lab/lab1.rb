@@ -92,3 +92,25 @@ def find_min(number)
 	min_el
 end
 
+def alg_Ev(a,b)
+	while a != 0 and b!= 0
+		if a > b
+			a %= b
+		else
+			b %= a
+		end
+	end
+	a+b
+end
+
+def count_prime_digits(num)
+	count = 0
+	iter = 1
+	until iter >= num
+		if alg_Ev(iter,num) == 1
+			count+=1
+		end
+		iter+=1
+	end
+	count
+end
