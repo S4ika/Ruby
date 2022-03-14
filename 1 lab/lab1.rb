@@ -125,3 +125,31 @@ def sum_digts_div_3(num)
 	end
 	sum
 end
+
+def max_count_vz_prost(num,div)
+	count = 0
+	while num > 0
+		if alg_Ev(num%10,div) == 1
+			count += 1
+		end
+		num /= 10
+	end
+	count
+end
+
+def method_3(num)
+	iter = 1
+	div = 1
+	max_count = 0
+	until iter >= num
+		if num%iter == 0
+			t = num
+			temp_max = max_count_vz_prost(t,iter)
+			if temp_max > max_count
+				max_count = temp_max
+			end
+		end
+		iter+=1
+	end
+	max_count
+end
